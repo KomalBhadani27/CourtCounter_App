@@ -40,6 +40,8 @@ public class Main2Activity extends AppCompatActivity {
              array1= bundle.getStringArrayList(MainActivity.Key);
         }
         TextView winner = findViewById(R.id.winner_text);
+        TextView team1 = findViewById(R.id.team1_text);
+        TextView team2 = findViewById(R.id.team2_text);
         assert array != null;
         assert array1 != null;
         if(!array.isEmpty() && !array1.isEmpty()) {
@@ -58,6 +60,8 @@ public class Main2Activity extends AppCompatActivity {
         } else {
             winner.setText("Tie");
         }
+        team1.setText(String.valueOf(total1));
+        team2.setText(String.valueOf(total2));
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                 this,
